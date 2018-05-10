@@ -1,0 +1,22 @@
+package io.naraplatform.share.restclient;
+
+
+import io.naraplatform.share.exception.NaraException;
+
+/**
+ * Created by kchuh@nextree.co.kr on 2016. 6. 23..
+ */
+public class NaraRestClientException extends NaraException {
+    //
+    public NaraRestClientException(String message) {
+        super(message);
+    }
+
+    public NaraRestClientException(String message, Throwable t) {
+        super(message, t);
+    }
+
+    public NaraRestClientException(Throwable t) {
+        super(t);
+    }
+}
