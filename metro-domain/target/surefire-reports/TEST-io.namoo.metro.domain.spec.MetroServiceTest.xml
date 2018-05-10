@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="io.namoo.metro.domain.spec.MetroServiceTest" time="0.017" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="io.namoo.metro.domain.spec.MetroServiceTest" time="0.019" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2018.1.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -22,7 +22,7 @@
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="visualvm.id" value="53019747707958"/>
+    <property name="visualvm.id" value="54571526630817"/>
     <property name="java.io.tmpdir" value="/var/folders/pd/gsmdnlj94zz88fvgyt2qqtc80000gn/T/"/>
     <property name="line.separator" value="
 "/>
@@ -65,9 +65,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testFindNoMetro" time="0.004"/>
-  <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testModifyMetro" time="0.012"/>
-  <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testRemoveMetro" time="0"/>
-  <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testRegisterMetro" time="0.001"/>
+  <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testFindNoMetro" time="0.005"/>
+  <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testModifyMetro" time="0.013"/>
+  <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testRemoveMetro" time="0.001"/>
+  <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testRegisterMetro" time="0"/>
   <testcase classname="io.namoo.metro.domain.spec.MetroServiceTest" name="testFindMetro" time="0"/>
 </testsuite>
