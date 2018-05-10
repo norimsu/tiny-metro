@@ -1,13 +1,7 @@
 package io.namoo.metro.ra.jpa;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-
-import java.util.NoSuchElementException;
-
+import io.namoo.metro.domain.entity.Metro;
+import io.namoo.metro.ra.jpa.repo.MetroRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,19 +11,15 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import io.namoo.metro.domain.entity.Metro;
-import io.namoo.metro.ra.jpa.repo.MetroRepository;
+import java.util.NoSuchElementException;
+
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-//@ContextConfiguration
-//@SpringBootTest(classes=SpringBootTestApplication.class)
 
 public class MetroJpaStoreTest {
 	//
-//    @Autowired
-//    private TestEntityManager entityManager;
-//
     @Autowired
     private MetroRepository metroRepository;
     
