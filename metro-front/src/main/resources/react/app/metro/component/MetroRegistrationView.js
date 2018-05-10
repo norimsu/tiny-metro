@@ -93,6 +93,7 @@ class MetroRegistrationView extends Component {
 
         <button onClick={this.onClickCancel}>취소</button>
         <button onClick={this.onClickSave}>등록</button>
+
         { registeredId &&
           <div>
             <p>Metro가 등록 되었습니다</p>
