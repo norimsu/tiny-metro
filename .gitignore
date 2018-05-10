@@ -174,13 +174,4 @@ fabric.properties
 .gitignore
 .idea/
 .project
-metro-domain/src/main/resources/
-metro-domain/src/test/resources/
-metro-share/src/main/resources/
-metro-share/src/test/
-metro-share/target/generated-sources/
-metro-share/target/test-classes/
-metro-store-jpa/src/main/resources/
-metro-store-jpa/src/test/resources/
-src/
-target/test-classes/
+target/
