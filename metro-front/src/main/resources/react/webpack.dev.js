@@ -89,7 +89,7 @@ module.exports = webpackMerge(commonConfig, {
     hot: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
     proxy: {
-      '/api': {
+      '/metro': {
         target: 'http://localhost:8080',
         secure: false,
       },

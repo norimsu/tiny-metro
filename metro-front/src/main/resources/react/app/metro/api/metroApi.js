@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 
-const metroBaseUrl = '/api/s/metros';
+const metroBaseUrl = '/metro';
 
 const mockMetros = [
   { name: 'Test Metro 1', time: 1525965252959, admins: {
@@ -37,7 +37,8 @@ const mockMetros = [
 
 function registerMetro(metroCdo) {
   //
-  // axios.post(`${metroBaseUrl}/metros`);
+  return axios.post(`${metroBaseUrl}/`, metroCdo);
+  /*
   const metro = {
     name: metroCdo.name,
     time: new Date().getTime(),
@@ -48,14 +49,16 @@ function registerMetro(metroCdo) {
 
   mockMetros.push(metro);
   return Promise.resolve();
+  */
 }
 
-function findMetros() {
-  return Promise.resolve(mockMetros);
+function findMetro(metroId) {
+  return axios.get(`${metroBaseUrl}/${metroId}`)
+  // return Promise.resolve(mockMetros);
 }
 
 
 export default {
   registerMetro,
-  findMetros,
+  findMetro,
 };
