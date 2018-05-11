@@ -1,2 +1,0 @@
-
-// Todo: Something initialize vendor
