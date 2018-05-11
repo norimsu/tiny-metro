@@ -1,11 +1,11 @@
 
-var webpack = require('webpack');
-var webpackMerge = require('webpack-merge');
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
+const webpackMerge = require('webpack-merge');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-var commonConfig = require('./webpack.common.js');
+const commonConfig = require('./webpack.common.js');
 
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';

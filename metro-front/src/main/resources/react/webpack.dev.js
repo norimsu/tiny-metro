@@ -1,17 +1,12 @@
 
-var webpack = require('webpack');
-var webpackMerge = require('webpack-merge');
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var StringReplacePlugin = require('string-replace-webpack-plugin');
+const webpack = require('webpack');
+const webpackMerge = require('webpack-merge');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-var commonConfig = require('./webpack.common.js');
+const commonConfig = require('./webpack.common.js');
 
-// Define external resources url
-var externalResources = {
-  commonAssetLocation: 'http://nara.namoo.io/common-asset',
-};
 
 module.exports = webpackMerge(commonConfig, {
   devtool: '#cheap-module-eval-source-map',
@@ -22,36 +17,6 @@ module.exports = webpackMerge(commonConfig, {
     filename: '[name].[hash].js',
   },
 
-  module: {
-    loaders: [
-      {
-        test: /index\.html$/,
-        loaders: ['raw-loader', StringReplacePlugin.replace({
-          replacements: [
-            {
-              pattern: /\*\{\S+\}/g,  // Search like ${commonAssetLocation}
-              replacement(match) {
-                const resourcePath = match.substring(2, match.length - 1);
-                return externalResources[resourcePath];
-              },
-            },
-            {
-              pattern: /\sth:\S+=/g, // Search like th:src=, th:href=, remove thymeleaf tag.
-              replacement(match) {
-                return ' ' + match.substring(4, match.length);
-              },
-            },
-            {
-              pattern: /\+'\S+'/g, // Search like +'/vendor.js'
-              replacement(match) {
-                return match.substring(2, match.length - 1);
-              },
-            },
-          ],
-        })],
-      }
-    ],
-  },
   plugins: [
     new ExtractTextPlugin('[name].[hash].css'),
     new webpack.HotModuleReplacementPlugin(),
