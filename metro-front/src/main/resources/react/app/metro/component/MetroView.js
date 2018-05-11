@@ -61,8 +61,8 @@ class MetroView extends Component {
               {metro.time}
             </p>
 
-            { metro.admins.admins.map((metroAdmin) =>
-              <div>
+            { metro.admins.admins.map((metroAdmin, index) =>
+              <div key={`metro_admin_${index}`}>
                 <p>
                   <label>Admin Id : </label>
                   {metroAdmin.id}
